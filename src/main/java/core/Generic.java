@@ -4,8 +4,19 @@ import java.util.List;
 
 public class Generic {
     public void execute() {
+        // class generic
         ApiResponse<String> response = new ApiResponse<>(true, "성공", "DTO");
         PageResult<String> page = new PageResult<>(0, 10, 100, List.of("hi"));
+
+        // method generic
+        Printer.print("Hello");
+        Printer.print(1.2);
+        String[] names = {"shu", "seohyun"};
+        ArrayUtils.printArray(names);
+
+        // class generic with 2 types
+        Pair<Integer, String> pair = new Pair<>(1, "shu");
+        System.out.println(pair.getKey() + ": " + pair.getValue());
     }
 
     public class ApiResponse<T> {
@@ -38,5 +49,35 @@ public class Generic {
         }
     }
 
+    public class Printer {
+        public static <T> void print(T data) {
+            System.out.println(data);
+        }
+    }
 
+    public class ArrayUtils {
+        public static <T> void printArray(T[] array) {
+            for (T element : array) {
+                System.out.println(element);
+            }
+        }
+    }
+
+    public class Pair<K, V> {
+        private K key;
+        private V value;
+
+        public Pair(K key, V value) {
+            this.key = key;
+            this.value = value;
+        }
+
+        public K getKey() {
+            return key;
+        }
+
+        public V getValue() {
+            return value;
+        }
+    }
 }
