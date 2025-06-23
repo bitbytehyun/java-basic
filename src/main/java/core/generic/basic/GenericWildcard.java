@@ -1,4 +1,4 @@
-package core;
+package core.generic.basic;
 
 import java.util.List;
 
