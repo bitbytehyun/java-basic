@@ -1,4 +1,4 @@
-package core.async.lock;
+package core.async.lock.synchro;
 
 public class Counter {
     private int count = 0;

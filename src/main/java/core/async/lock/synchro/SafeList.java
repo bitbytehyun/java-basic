@@ -1,4 +1,4 @@
-package core.async.lock;
+package core.async.lock.synchro;
 
 import java.util.ArrayList;
 import java.util.List;

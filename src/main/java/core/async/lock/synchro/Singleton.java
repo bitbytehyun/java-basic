@@ -1,4 +1,4 @@
-package core.async.lock;
+package core.async.lock.synchro;
 
 public class Singleton {
     private static Singleton instance = new Singleton();
