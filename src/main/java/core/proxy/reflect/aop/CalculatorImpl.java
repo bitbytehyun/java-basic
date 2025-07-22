@@ -1,4 +1,4 @@
-package core.proxy.reflect;
+package core.proxy.reflect.aop;
 
 public class CalculatorImpl implements Calculator {
 

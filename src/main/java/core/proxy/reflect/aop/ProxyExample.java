@@ -1,4 +1,4 @@
-package core.proxy.reflect;
+package core.proxy.reflect.aop;
 
 import java.lang.reflect.Proxy;
 
