@@ -31,6 +31,7 @@ public class PlaceOrderService implements PlaceOrderUseCase {
 
         Order order = Order.create(command.customerId(), command.productId(), command.quantity(), price);
         Order saved = saveOrderPort.save(order);
+//        saved.modift(); //TODO 영속성컨텍스트의 오류 가능성 공부 필요
         return saved.getId();
     }
 }
